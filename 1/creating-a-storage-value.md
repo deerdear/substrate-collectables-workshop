@@ -22,7 +22,7 @@ decl_storage! {
 
 Here we have defined two variables: a `u32` and a `bool` with a getter function named `my_bool_getter`. The `get` parameter is optional, but if you add it to your storage item it will expose a getter function with the name specified (`fn getter_name() -> Type`).
 
-To store these basic storage values, you need to import the `support::StorageValue` module.
+To store these basic storage values, the `support::StorageValue` module needs to be [re-exported](https://doc.rust-lang.org/book/ch07-02-modules-and-use-to-control-scope-and-privacy.html#re-exporting-names-with-pub-use). This is already done in line 35 of `lib.rs`. 
 
 ### Working with a Storage Value
 
