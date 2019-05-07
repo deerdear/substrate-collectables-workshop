@@ -1,7 +1,7 @@
 Creating a Storage Value
 ===
 
-Let's add the most simple logic we can to our runtime: a function which stores a variable.
+Let's add the most simple logic we can to our `substratekitties` runtime: a function which stores a variable.
 
 To do this, we will first need to define a storage variable for a [**Storage Item**](https://docs.substrate.dev/docs/glossary#section-storage-items) in the [**`decl_storage!`**](https://crates.parity.io/srml_support_procedural/macro.decl_storage.html) macro. This allows for type-safe usage of the Substrate storage database, so you can keep things around between blocks.
 
@@ -22,7 +22,7 @@ decl_storage! {
 
 Here we have defined two variables: a `u32` and a `bool` with a getter function named `my_bool_getter`. The `get` parameter is optional, but if you add it to your storage item it will expose a getter function with the name specified (`fn getter_name() -> Type`).
 
-To store these basic storage values, the `support::StorageValue` module needs to be [re-exported](https://doc.rust-lang.org/book/ch07-02-modules-and-use-to-control-scope-and-privacy.html#re-exporting-names-with-pub-use). This is already done in line 35 of `lib.rs`. 
+To store these basic storage values, the `support::StorageValue` module needs to be [re-exported](https://doc.rust-lang.org/book/ch07-02-modules-and-use-to-control-scope-and-privacy.html#re-exporting-names-with-pub-use) into our `substratekitties.rs`. 
 
 ### Working with a Storage Value
 
